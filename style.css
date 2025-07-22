@@ -1,16 +1,22 @@
 .card {
   position: relative;
-  width: fit-content; /* or use a fixed width like 200px if needed */
+  width: 200px; /* or use a fixed width like 200px if needed */
+  margin: 40px auto; /* centers and gives breathing room */
   cursor: pointer;
   perspective: 1000px;
   display: inline-block;
   transform-style: preserve-3d;
 }
 
+
 /* Set a consistent size for the whole card */
 .card-front,
 .card-back {
-  position: absolute;
+  position: relative;
+  width: 200px;
+  height: 300px; /* match your image height roughly */
+  margin: 40px auto;
+  perspective: 1000px;
   top: 0;
   left: 0;
   backface-visibility: hidden;
