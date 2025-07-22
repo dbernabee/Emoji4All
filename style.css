@@ -1,7 +1,7 @@
 .card {
   position: relative;
-  width: 200px;  /* adjust size as needed */
-  height: 200px;
+  /*width: 200px; adjust size as needed */
+  /*height: 200px; */
   cursor: pointer;
   perspective: 1000px;
 }
