@@ -1,40 +1,51 @@
-.card {
-  position: relative;
-  width: 200px; /* or use a fixed width like 200px if needed */
-  height: 300px; /* match your image height roughly */
-  margin: 40px auto; /* centers and gives breathing room */
-  cursor: pointer;
-  perspective: 1000px;
-  display: inline-block;
-  transform-style: preserve-3d;
+/* Container for all cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* cards wrap to new lines */
+  justify-content: center;
+  gap: 20px; /* space between cards */
+  flex-grow: 1; /* take up remaining space to push footer down */
+  padding: 40px 0;
 }
 
+/* Individual card styling */
+.card {
+  position: relative;
+  width: 200px; /* fixed width */
+  height: auto;
+  cursor: pointer;
+  perspective: 1000px;
+  flex-shrink: 0;
+}
 
-/* Set a consistent size for the whole card */
+/* Front and back images absolutely positioned inside the card */
 .card-front,
 .card-back {
-  position: relative;
-  width: 200px;
-  height: 300px; /* match your image height roughly */
-  margin: 40px auto;
-  perspective: 1000px;
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: auto;
   backface-visibility: hidden;
   transition: transform 0.6s;
   display: block;
-  width: 200px; /* adjust this to scale size */
-  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px; /* optional for nice rounded corners */
+/* Front image visible initially */
+.card-front {
+  z-index: 2;
 }
 
-/* Flip logic */
+/* Back image hidden initially and flipped */
+.card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  display: none;
+}
+
+/* When card is flipped */
 .card.flipped .card-front {
   transform: rotateY(180deg);
   display: none;
