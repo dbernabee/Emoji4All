@@ -1,6 +1,7 @@
 .card {
   position: relative;
   width: 200px; /* or use a fixed width like 200px if needed */
+  height: 300px; /* match your image height roughly */
   margin: 40px auto; /* centers and gives breathing room */
   cursor: pointer;
   perspective: 1000px;
