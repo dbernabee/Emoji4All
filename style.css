@@ -10,17 +10,20 @@ body {
 main {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   gap: 20px;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 footer {
   text-align: center;
   padding: 1em;
   background: #f0f0f0;
+  position: relative;
+  z-index: 10;
 }
 
 /* Card styles */
