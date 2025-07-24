@@ -112,7 +112,7 @@ footer {
 
 /* added this, remove if any problems occur lol*/
 .card:hover {
-  transform: scale(0.5);
+  transform: scale(1.0);
   z-index: 20;
 }
 
