@@ -16,8 +16,8 @@ emojis.forEach(([emoji, x, y]) => {
   const el = document.createElement('div');
   el.className = 'emoji';
   el.textContent = emoji;
-  el.style.left = `${x * 48 + 12}px`;
-  el.style.top = `${y * 48 + 18}px`;
+  el.style.left = `${x * 48 + 42}px`; // 42px = left margin
+  el.style.top = `${y * 48 + 30}px`;  // 30px = top margin
 
   el.addEventListener('click', () => {
     placeChip(x, y);
@@ -34,8 +34,8 @@ function placeChip(x, y) {
 
   const chip = document.createElement('div');
   chip.className = 'chip';
-  el.style.left = `${x * 48 + 42}px`; // 42px = left margin
-  el.style.top = `${y * 48 + 30}px`;  // 30px = top margin
+  chip.style.left = `${x * 48 + 42 + 14}px`;
+  chip.style.top = `${y * 48 + 30 + 14}px`;
 
 
   // Make draggable
