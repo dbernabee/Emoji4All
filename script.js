@@ -167,22 +167,22 @@ emojis.forEach(([emoji, x, y]) => {
   emojiLayer.appendChild(el);
 });
 
+const chipColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+const chipsPerColor = 3;
 let chipsPlaced = 0;
-const MAX_CHIPS = 3;
 
-function placeChip(x, y) {
-  if (chipsPlaced >= MAX_CHIPS) return;
-
+function createChip(color, initialX, initialY) {
   const chip = document.createElement('div');
   chip.className = 'chip';
-  chip.style.left = `${x * 48 + 38 + 12}px`;
-  chip.style.top = `${y * 48 + 28 + 12}px`;
-
+  chip.style.backgroundColor = color;
+  chip.style.left = `${initialX}px`;
+  chip.style.top = `${initialY}px`;
+  chip.style.position = 'absolute';
 
   // Make draggable
   chip.draggable = true;
   chip.addEventListener('dragstart', (e) => {
-    e.dataTransfer.setData("text/plain", null); // for Firefox
+    e.dataTransfer.setData("text/plain", null);
     chip.classList.add('dragging');
   });
   chip.addEventListener('dragend', (e) => {
@@ -193,5 +193,24 @@ function placeChip(x, y) {
   });
 
   chipLayer.appendChild(chip);
-  chipsPlaced++;
 }
+
+function spawnAllChips() {
+  chipLayer.innerHTML = ''; // Clear existing chips
+
+  let startX = 10;  // Starting position for chips
+  let startY = 10;
+  const spacingY = 30;
+
+  chipColors.forEach((color, colorIndex) => {
+    for (let i = 0; i < chipsPerColor; i++) {
+      // Position chips stacked vertically per color
+      let posX = startX + colorIndex * 30; 
+      let posY = startY + i * spacingY;
+      createChip(color, posX, posY);
+      chipsPlaced++;
+    }
+  });
+}
+
+spawnAllChips();
