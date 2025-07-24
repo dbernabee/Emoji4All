@@ -16,7 +16,7 @@ emojis.forEach(([emoji, x, y]) => {
   const el = document.createElement('div');
   el.className = 'emoji';
   el.textContent = emoji;
-  el.style.left = `${x * 48 + 38}px`; // 42px = left margin
+  el.style.left = `${x * 48 + 35}px`; // 42px = left margin
   el.style.top = `${y * 48 + 28}px`;  // 30px = top margin
 
   el.addEventListener('click', () => {
