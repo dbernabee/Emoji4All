@@ -49,7 +49,7 @@ main {
   width: 576px;
   height: 576px;
   z-index: 10;
-  pointer-events: none; 
+  pointer-events: none; /*if it doesn't work, change to auto*/
 }
 
 /* Emoji Styling */
