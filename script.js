@@ -16,8 +16,8 @@ emojis.forEach(([emoji, x, y]) => {
   const el = document.createElement('div');
   el.className = 'emoji';
   el.textContent = emoji;
-  el.style.left = `${x * 48 + 10}px`;
-  el.style.top = `${y * 48 + 14}px`;
+  el.style.left = `${x * 48 + 12}px`;
+  el.style.top = `${y * 48 + 18}px`;
 
   el.addEventListener('click', () => {
     placeChip(x, y);
