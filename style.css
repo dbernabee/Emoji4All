@@ -110,6 +110,11 @@ footer {
   perspective: 1000px;
 }
 
+.card:hover {
+  transform: scale(2);
+  z-index: 20;
+}
+
 .card-front,
 .card-back {
   width: 100%;
