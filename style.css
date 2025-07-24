@@ -110,6 +110,7 @@ footer {
   perspective: 1000px;
 }
 
+/* added this, remove if any problems occur lol*/
 .card:hover {
   transform: scale(2);
   z-index: 20;
