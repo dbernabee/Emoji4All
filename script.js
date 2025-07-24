@@ -9,7 +9,8 @@ const chipLayer = document.getElementById('chip-layer');
 const emojis = [
   ["🍎", 0, 0],
   ["💡", 3, 1],
-  ["🎲", 8, 10]
+  ["🎲", 8, 10],
+  ["🎲", 2, 3]
 ];
 
 emojis.forEach(([emoji, x, y]) => {
