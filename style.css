@@ -4,6 +4,26 @@
   font-style: normal;
 }
 
+button {
+  background-color: #ff90e8;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color: #ff66d4;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 .anim-typewriter {
   white-space: nowrap;           /* keep text on one line */
   overflow: hidden;              /* hide overflowing text */
