@@ -1,3 +1,37 @@
+<script>
+  const glitterContainer = document.querySelector('.glitter-container');
+  const sparkles = ['✨', '🌟', '💖', '🩷', '💫'];
+
+  // Falling glitter from the sky
+  function createFallingGlitter() {
+    const glitter = document.createElement('div');
+    glitter.classList.add('glitter');
+    glitter.innerText = sparkles[Math.floor(Math.random() * sparkles.length)];
+    glitter.style.left = Math.random() * 100 + 'vw';
+    glitter.style.fontSize = (Math.random() * 10 + 12) + 'px';
+    glitter.style.animationDuration = (Math.random() * 2 + 3) + 's';
+    glitterContainer.appendChild(glitter);
+
+    setTimeout(() => glitter.remove(), 5000);
+  }
+
+  setInterval(createFallingGlitter, 300);
+
+  // Sparkles follow mouse
+  document.addEventListener('mousemove', (e) => {
+    const sparkle = document.createElement('div');
+    sparkle.classList.add('sparkle');
+    sparkle.innerText = sparkles[Math.floor(Math.random() * sparkles.length)];
+    sparkle.style.left = e.clientX + 'px';
+    sparkle.style.top = e.clientY + 'px';
+    sparkle.style.fontSize = (Math.random() * 10 + 12) + 'px';
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => sparkle.remove(), 1000);
+  });
+</script>
+
+
 function flipCard(cardElement) {
   cardElement.classList.toggle('flipped');
 }
