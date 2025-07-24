@@ -77,6 +77,12 @@ main {
   position: absolute;
   cursor: grab;
   z-index: 15;
+  pointer-events: auto; 
+}
+
+.chip.dragging {
+  opacity: 0.6;
+  cursor: grabbing;
 }
 
 footer {
