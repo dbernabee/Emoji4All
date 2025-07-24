@@ -8,7 +8,7 @@ const chipLayer = document.getElementById('chip-layer');
 // Example emoji list: [emoji, x index, y index]
 const emojis = [
   ["🍎", 0, 0],
-  ["💡", 5, 2],
+  ["💡", 0, 1],
   ["🎲", 8, 10]
 ];
 
