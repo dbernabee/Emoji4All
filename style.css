@@ -4,6 +4,53 @@
   font-style: normal;
 }
 
+/* General glitter & sparkle styles */
+.glitter-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.glitter {
+  position: absolute;
+  top: -10px;
+  font-size: 16px;
+  color: #fff;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  animation: fadeOut 1s forwards;
+  font-size: 18px;
+  z-index: 9999;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-10px);
+  }
+}
+
+
 button {
   background-color: #ff90e8;
   color: white;
