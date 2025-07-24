@@ -34,8 +34,9 @@ function placeChip(x, y) {
 
   const chip = document.createElement('div');
   chip.className = 'chip';
-  chip.style.left = `${x * 48 + 14}px`;
-  chip.style.top = `${y * 48 + 14}px`;
+  el.style.left = `${x * 48 + 42}px`; // 42px = left margin
+  el.style.top = `${y * 48 + 30}px`;  // 30px = top margin
+
 
   // Make draggable
   chip.draggable = true;
