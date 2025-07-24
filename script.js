@@ -1,4 +1,4 @@
-<script>
+
   const glitterContainer = document.querySelector('.glitter-container');
   const sparkles = ['✨', '🌟', '💖', '🩷', '💫'];
 
@@ -29,7 +29,7 @@
 
     setTimeout(() => sparkle.remove(), 1000);
   });
-</script>
+
 
 
 function flipCard(cardElement) {
