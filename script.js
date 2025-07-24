@@ -198,7 +198,7 @@ function createChip(color, initialX, initialY) {
 function spawnAllChips() {
   chipLayer.innerHTML = ''; // Clear existing chips
 
-  let startX = 0;  // Starting position for chips
+  let startX = -50;  // Starting position for chips
   let startY = 10;
   const spacingY = 30;
 
