@@ -167,7 +167,7 @@ emojis.forEach(([emoji, x, y]) => {
   emojiLayer.appendChild(el);
 });
 
-const chipColors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+const chipColors = ['#D99CA5', '#EDCB9C', '#EFEFA8', '#C2E0AE', '#8FC2DF', '#A19AD1'];
 const chipsPerColor = 3;
 let chipsPlaced = 0;
 
@@ -198,7 +198,7 @@ function createChip(color, initialX, initialY) {
 function spawnAllChips() {
   chipLayer.innerHTML = ''; // Clear existing chips
 
-  let startX = 10;  // Starting position for chips
+  let startX = 5;  // Starting position for chips
   let startY = 10;
   const spacingY = 30;
 
