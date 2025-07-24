@@ -16,7 +16,7 @@
 
 @keyframes typewriter {
   from { width: 0; }
-  to { width: 80%; }  /* use ch to represent characters */
+  to { width: 30ch; }  /* use ch to represent characters */
 }
 
 @keyframes blinkTextCursor {
