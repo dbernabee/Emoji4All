@@ -7,7 +7,7 @@
 .anim-typewriter {
   white-space: nowrap;           /* keep text on one line */
   overflow: hidden;              /* hide overflowing text */
-  border-right: 2px solid rgba(255,255,255,0.75);  /* cursor */
+  border-right: 2px solid rgba(0,0,0,0.75);  /* cursor */
   width: 0;                     /* start hidden */
   animation: 
     typewriter 4s steps(44) 1s forwards,
