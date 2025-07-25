@@ -186,7 +186,7 @@ footer {
   grid-auto-flow: column;        /* Fill vertically first */
   grid-template-rows: repeat(6, 200px);  /* 6 vertical rows per column */
   grid-auto-columns: 220px;      /* Width of each column */
-  gap: 40px;
+  gap: 60px;
   padding: 20px;
   max-width: 100%;               /* Prevent overflow if needed */
 }
