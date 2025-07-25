@@ -195,6 +195,7 @@ footer {
   height: auto;
   cursor: pointer;
   perspective: 1000px;
+  flex: 0 0 auto; /* ⬅️ ADD THIS LINE */
 }
 
 /* added this, remove if any problems occur lol*/
