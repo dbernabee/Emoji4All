@@ -183,21 +183,20 @@ footer {
 /* Card styles */
 .card-container {
   display: grid;
-  grid-auto-flow: column;        /* Fills vertically first */
-  grid-auto-rows: 200px;         /* Height of each row (card height) */
-  grid-template-columns: repeat(auto-fill, 1fr); /* Creates columns as needed */
+  grid-auto-flow: column;        /* Fill vertically first */
+  grid-template-rows: repeat(6, 200px);  /* 6 vertical rows per column */
+  grid-auto-columns: 220px;      /* Width of each column */
   gap: 20px;
-  height: 1200px;                /* Set to fit 6 cards vertically (6 × 200 + gaps) */
   padding: 20px;
+  max-width: 100%;               /* Prevent overflow if needed */
 }
 
 .card {
   position: relative;
   width: 200px; /* Adjust as needed */
-  height: auto;
+  height: 200px;
   cursor: pointer;
   perspective: 1000px;
-  flex: 0 0 auto; /* ⬅️ ADD THIS LINE */
 }
 
 /* added this, remove if any problems occur lol*/
