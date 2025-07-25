@@ -183,10 +183,12 @@ footer {
 /* Card styles */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-flow: column;        /* Fills vertically first */
+  grid-auto-rows: 200px;         /* Height of each row (card height) */
+  grid-template-columns: repeat(auto-fill, 1fr); /* Creates columns as needed */
   gap: 20px;
+  height: 1200px;                /* Set to fit 6 cards vertically (6 × 200 + gaps) */
   padding: 20px;
-  justify-items: center; /* optional: center each card inside its column */
 }
 
 .card {
