@@ -182,11 +182,11 @@ footer {
 
 /* Card styles */
 .card-container {
-  display: flex;
-  flex-wrap: wrap; /* allows cards to wrap on small screens */
-  justify-content: center;
-  gap: 20px; /* space between cards */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
   padding: 20px;
+  justify-items: center; /* optional: center each card inside its column */
 }
 
 .card {
