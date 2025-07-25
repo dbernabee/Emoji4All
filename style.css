@@ -193,8 +193,8 @@ footer {
 
 .card {
   position: relative;
-  width: 200px; /* Adjust as needed */
-  height: 200px;
+  width: 400px; /* Adjust as needed */
+  height: 400px;
   cursor: pointer;
   perspective: 1000px;
 }
